@@ -38,9 +38,9 @@ public class BallMovement : MonoBehaviour
         if (rB.velocity.magnitude < nextShotMinSpeed)
         {
             rB.velocity = new Vector3(0, 0, 0);
-        }
+
             turnOnLine();
-            
+
             if (Input.GetKey(KeyCode.A))
             {
                 AngleUpdate(-1);
@@ -62,8 +62,8 @@ public class BallMovement : MonoBehaviour
                     Shoot();
                 }
             }
+        }
 
-        
         else
         {
             turnOffLine();
