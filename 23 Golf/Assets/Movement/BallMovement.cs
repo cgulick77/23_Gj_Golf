@@ -8,7 +8,7 @@ public class BallMovement : MonoBehaviour
 {
     [Range(1.0f, 1000.0f)]
     public float maxPower;
-    [Range(0.05f, 0.3f)]
+    [Range(0.3f, 1.0f)]
     public float nextShotMinSpeed;
     public float changeAngleSpeed;
     public float maxAngVel;
@@ -37,6 +37,8 @@ public class BallMovement : MonoBehaviour
     {
         if (rB.velocity.magnitude < nextShotMinSpeed)
         {
+            rB.velocity = new Vector3(0, 0, 0);
+        }
             turnOnLine();
             
             if (Input.GetKey(KeyCode.A))
@@ -61,7 +63,7 @@ public class BallMovement : MonoBehaviour
                 }
             }
 
-        }
+        
         else
         {
             turnOffLine();
