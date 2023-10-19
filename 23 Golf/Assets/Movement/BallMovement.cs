@@ -20,6 +20,7 @@ public class BallMovement : MonoBehaviour
     private GameObject strokeUI;
     private int strokeCount;
     private GameObject cam;
+    public Vector3 newtonsAppeilay;
 
     // Start is called before the first frame update
     void Awake()
@@ -30,6 +31,7 @@ public class BallMovement : MonoBehaviour
         line = GetComponent<LineRenderer>();
         strokeCount = 0;
         cam= GameObject.Find("StupidCamTrack");
+        Physics.gravity = newtonsAppeilay;
     }
 
     // Update is called once per frame
