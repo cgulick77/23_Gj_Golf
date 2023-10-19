@@ -16,7 +16,7 @@ public class BallMovement : MonoBehaviour
     private Rigidbody rB;
     private float angle;
     private LineRenderer line;
-    public bool bar, shoot=false;
+    public bool bar, shoot=false,scoreCard;
     private GameObject strokeUI;
     private int strokeCount;
     private GameObject cam;
@@ -67,7 +67,27 @@ public class BallMovement : MonoBehaviour
             turnOffLine();
             SendPos();
         }
-        
+        if (Input.GetKey(KeyCode.R))
+        {
+            SceneManager.LoadScene("SampleScene");
+        }
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            if (scoreCard)
+            {
+                GameObject.Find("ScoreCard").GetComponent<CanvasGroup>().alpha = 1;
+                scoreCard = false;
+            }
+            else
+            {
+                GameObject.Find("ScoreCard").GetComponent<CanvasGroup>().alpha = 0;
+                scoreCard = true;
+            }
+        }
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
         UpdateLine();
     }
     private void FixedUpdate()
@@ -98,7 +118,7 @@ public class BallMovement : MonoBehaviour
     }
     private void turnOnLine()
     {
-        line.startWidth = 10.0f;
+        line.startWidth = 1.0f;
     }
     private void SendPos()
     {
@@ -112,8 +132,8 @@ public class BallMovement : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Hole"))
         {
-
-            SceneManager.LoadScene("SampleScene");
+            GameObject.Find("Score").GetComponent<StrokeScoreUpdate>().updateScorecard(strokeCount);
+           // SceneManager.LoadScene("SampleScene");
         }
     }
 }
