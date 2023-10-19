@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8871505935073336835}
   - component: {fileID: 9197858175719114410}
   - component: {fileID: 6738175934636810650}
-  - component: {fileID: 6823325027456638210}
+  - component: {fileID: 3404753150729412657}
   m_Layer: 0
   m_Name: Green_1x1_Angled_Corner1
   m_TagString: Untagged
@@ -26,7 +26,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7930369673595217992}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 208.09999, y: -0.8138969, z: 32.3}
   m_LocalScale: {x: 0.13430138, y: 0.13430138, z: 0.13430138}
   m_ConstrainProportionsScale: 0
@@ -84,7 +84,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &6823325027456638210
+--- !u!65 &3404753150729412657
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -95,5 +95,5 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 166.39992, y: 3, z: 166.39992}
-  m_Center: {x: -83.19996, y: 5.64814e-23, z: 83.19996}
+  m_Size: {x: 166.3999, y: 5, z: 166.3999}
+  m_Center: {x: -83.19995, y: -2.677811, z: 83.19995}
