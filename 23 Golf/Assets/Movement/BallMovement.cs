@@ -6,9 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class BallMovement : MonoBehaviour
 {
-    [Range(1.0f, 100.0f)]
+    [Range(1.0f, 1000.0f)]
     public float maxPower;
-    [Range(0.01f, 0.1f)]
+    [Range(0.05f, 0.3f)]
     public float nextShotMinSpeed;
     public float changeAngleSpeed;
     public float maxAngVel;
@@ -35,7 +35,7 @@ public class BallMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (rB.velocity.magnitude < 0.01f)
+        if (rB.velocity.magnitude < nextShotMinSpeed)
         {
             turnOnLine();
             
@@ -86,7 +86,7 @@ public class BallMovement : MonoBehaviour
     }
     private void turnOnLine()
     {
-        line.startWidth = 1.0f;
+        line.startWidth = 10.0f;
     }
     private void SendPos()
     {
