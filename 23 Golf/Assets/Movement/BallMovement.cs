@@ -118,7 +118,7 @@ public class BallMovement : MonoBehaviour
     }
     private void turnOnLine()
     {
-        line.startWidth = 10.0f;
+        line.startWidth = 1.0f;
     }
     private void SendPos()
     {
