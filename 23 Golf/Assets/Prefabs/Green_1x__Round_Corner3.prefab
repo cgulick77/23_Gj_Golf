@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3785067586490133475
+--- !u!1 &3384202100965163709
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,47 +8,47 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5346174715260631256}
-  - component: {fileID: 7126456888487231890}
-  - component: {fileID: 6035941606422078726}
-  - component: {fileID: 4895954438930882075}
+  - component: {fileID: 5940611584397852492}
+  - component: {fileID: 8355682856890812784}
+  - component: {fileID: 1293683363186149276}
+  - component: {fileID: 8031820474068802664}
   m_Layer: 0
-  m_Name: default
+  m_Name: Green_1x__Round_Corner3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5346174715260631256
+--- !u!4 &5940611584397852492
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3785067586490133475}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_GameObject: {fileID: 3384202100965163709}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 264.9, y: -0.8138969, z: -32}
+  m_LocalScale: {x: 0.13430138, y: 0.13430138, z: 0.13430138}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 4774195652655958400}
+  m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &7126456888487231890
+--- !u!33 &8355682856890812784
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3785067586490133475}
-  m_Mesh: {fileID: -2432090755550338912, guid: db89ee935f569484eb913758a6b5d059, type: 3}
---- !u!23 &6035941606422078726
+  m_GameObject: {fileID: 3384202100965163709}
+  m_Mesh: {fileID: 2171285707814601296, guid: 6da75a23f026e56488c52f503049233d, type: 3}
+--- !u!23 &1293683363186149276
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3785067586490133475}
+  m_GameObject: {fileID: 3384202100965163709}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -84,48 +84,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &4895954438930882075
+--- !u!65 &8031820474068802664
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3785067586490133475}
+  m_GameObject: {fileID: 3384202100965163709}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 400, y: 0.00048828125, z: 400}
-  m_Center: {x: -324.62512, y: 35.70514, z: 880.0879}
---- !u!1 &5263169791223763770
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4774195652655958400}
-  m_Layer: 0
-  m_Name: Green_1x__Round_Corner3
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4774195652655958400
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5263169791223763770}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2794.7205, y: 0, z: 5143.3984}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 5346174715260631256}
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Size: {x: 166.39967, y: 3, z: 166.39998}
+  m_Center: {x: 83.19984, y: 0.00012207033, z: 83.19999}
