@@ -20,6 +20,7 @@ public class BallMovement : MonoBehaviour
     private GameObject strokeUI;
     private int strokeCount;
     private GameObject cam;
+    public Vector3 newtonsAppeilay;
 
     // Start is called before the first frame update
     void Awake()
@@ -30,6 +31,7 @@ public class BallMovement : MonoBehaviour
         line = GetComponent<LineRenderer>();
         strokeCount = 0;
         cam= GameObject.Find("StupidCamTrack");
+        Physics.gravity = newtonsAppeilay;
     }
 
     // Update is called once per frame
@@ -38,9 +40,9 @@ public class BallMovement : MonoBehaviour
         if (rB.velocity.magnitude < nextShotMinSpeed)
         {
             rB.velocity = new Vector3(0, 0, 0);
-        }
+
             turnOnLine();
-            
+
             if (Input.GetKey(KeyCode.A))
             {
                 AngleUpdate(-1);
@@ -62,8 +64,8 @@ public class BallMovement : MonoBehaviour
                     Shoot();
                 }
             }
+        }
 
-        
         else
         {
             turnOffLine();
