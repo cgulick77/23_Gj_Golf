@@ -16,7 +16,7 @@ public class BallMovement : MonoBehaviour
     private Rigidbody rB;
     private float angle;
     private LineRenderer line;
-    public bool bar;
+    public bool bar, shoot=false;
     private GameObject strokeUI;
     private int strokeCount;
     private GameObject cam;
@@ -70,6 +70,18 @@ public class BallMovement : MonoBehaviour
         
         UpdateLine();
     }
+    private void FixedUpdate()
+    {
+        if (shoot)
+        {
+            float temp = GameObject.Find("PowerBar").GetComponent<Image>().fillAmount;
+            rB.AddForce(Quaternion.Euler(0, angle, 0) * Vector3.forward * maxPower * temp, ForceMode.Impulse);
+            shoot = false;
+            //shoot sound
+            strokeCount++;
+            strokeUI.GetComponent<StrokeUI>().addAStroke(strokeCount);
+        }
+    }
     private void AngleUpdate(int direction)
     {
         angle += changeAngleSpeed * Time.deltaTime * direction;
@@ -94,16 +106,13 @@ public class BallMovement : MonoBehaviour
     }
     private void Shoot()
     {
-        float temp = GameObject.Find("PowerBar").GetComponent<Image>().fillAmount;
-        rB.AddForce(Quaternion.Euler(0, angle, 0) * Vector3.forward * maxPower* temp, ForceMode.Impulse);
-        //shoot sound
-        strokeCount++;
-        strokeUI.GetComponent<StrokeUI>().addAStroke(strokeCount);
+        shoot = true;
     }
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Hole"))
         {
+
             SceneManager.LoadScene("SampleScene");
         }
     }
