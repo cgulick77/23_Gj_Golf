@@ -113,7 +113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a234750de1f236649a264748c6e65b28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxPower: 4
+  maxPower: 70
   nextShotMinSpeed: 0.0208
   changeAngleSpeed: 40
   maxAngVel: 1000

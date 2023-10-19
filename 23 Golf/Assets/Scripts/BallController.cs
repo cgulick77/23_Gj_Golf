@@ -37,6 +37,6 @@ public class BallController : MonoBehaviour
 
         // Adjust the light intensity and range based on the brightness change
         ballLight.intensity += .05f; // You may need to fine-tune this value
-        ballLight.range += 45; // Adjust the range based on your requirements
+        ballLight.range += 500; // Adjust the range based on your requirements
     }
 }
