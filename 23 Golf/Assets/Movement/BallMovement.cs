@@ -159,6 +159,7 @@ public class BallMovement : MonoBehaviour
         rB.velocity = new Vector3(0, 0, 0);
         rB.angularVelocity = new Vector3(0, 0, 0);
         transform.position = startPos;
+        strokeCount = 0;
         GameObject.Find("ScoreCard").GetComponent<CanvasGroup>().alpha = 0;
         scoreCard = true;
         GameObject.Find("SceneManager").GetComponent<SceneMan>().nextScene();
