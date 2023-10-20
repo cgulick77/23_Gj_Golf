@@ -76,7 +76,9 @@ public class BallMovement : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.R))
         {
-            SceneManager.LoadScene("SampleScene");
+            rB.velocity = new Vector3(0, 0, 0);
+            rB.angularVelocity = new Vector3(0, 0, 0);
+            transform.position = startPos;
         }
         if (Input.GetKeyDown(KeyCode.Q))
         {
@@ -143,7 +145,12 @@ public class BallMovement : MonoBehaviour
         if (collision.gameObject.CompareTag("Wall"))
         {
             source.PlayOneShot(wall);
+            this.gameObject.transform.GetChild(1).GetComponentInChildren<ParticleSystem>().Play();
         }
+    }
+    private void OnCollisionExit(Collision collision)
+    {
+        this.gameObject.transform.GetChild(1).GetComponentInChildren<ParticleSystem>().Stop();
     }
     private void OnTriggerEnter(Collider other)
     {

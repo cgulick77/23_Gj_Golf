@@ -14,9 +14,9 @@ public class SceneMan : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.T))
+        if (Input.GetKey(KeyCode.R))
             {
-            nextScene();
+            reloadScene();
         }
     }
     public void nextScene()

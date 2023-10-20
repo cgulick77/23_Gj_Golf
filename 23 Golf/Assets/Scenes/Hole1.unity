@@ -491,6 +491,10 @@ PrefabInstance:
       value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 2516578142370031235, guid: 8c5e1f117bbd0a145b2c46411996dd8b, type: 3}
+      propertyPath: startPos.y
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2516578142370031235, guid: 8c5e1f117bbd0a145b2c46411996dd8b, type: 3}
       propertyPath: nextShotMinSpeed
       value: 0.3
       objectReference: {fileID: 0}
