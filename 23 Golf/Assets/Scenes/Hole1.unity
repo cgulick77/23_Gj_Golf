@@ -486,26 +486,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ball
       objectReference: {fileID: 0}
-    - target: {fileID: 2516578142370031235, guid: 8c5e1f117bbd0a145b2c46411996dd8b, type: 3}
-      propertyPath: maxPower
-      value: 35
-      objectReference: {fileID: 0}
-    - target: {fileID: 2516578142370031235, guid: 8c5e1f117bbd0a145b2c46411996dd8b, type: 3}
-      propertyPath: startPos.y
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 2516578142370031235, guid: 8c5e1f117bbd0a145b2c46411996dd8b, type: 3}
-      propertyPath: nextShotMinSpeed
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2516578142370031235, guid: 8c5e1f117bbd0a145b2c46411996dd8b, type: 3}
-      propertyPath: newtonsAppeilay.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2516578142370031235, guid: 8c5e1f117bbd0a145b2c46411996dd8b, type: 3}
-      propertyPath: newtonsAppeilay.y
-      value: -45
-      objectReference: {fileID: 0}
     - target: {fileID: 2516578142370031247, guid: 8c5e1f117bbd0a145b2c46411996dd8b, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -2662,6 +2642,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1041640355447263143, guid: db721992d8cf9994094d49c08949d21a, type: 3}
+      propertyPath: m_text
+      value: 'Hole 1 2 3 4 5 6 - - - '
+      objectReference: {fileID: 0}
     - target: {fileID: 2581842516822759073, guid: db721992d8cf9994094d49c08949d21a, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -2697,6 +2681,10 @@ PrefabInstance:
     - target: {fileID: 5575715463887251078, guid: db721992d8cf9994094d49c08949d21a, type: 3}
       propertyPath: m_text
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5575715464735921550, guid: db721992d8cf9994094d49c08949d21a, type: 3}
+      propertyPath: m_text
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8995676671168179729, guid: db721992d8cf9994094d49c08949d21a, type: 3}
       propertyPath: m_Pivot.x
@@ -2902,23 +2890,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dbbc51cb1ab75ed42859c39e70714c51, type: 3}
---- !u!1 &2114695444 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2516578142370031232, guid: 8c5e1f117bbd0a145b2c46411996dd8b, type: 3}
-  m_PrefabInstance: {fileID: 500988408}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2114695455
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2114695444}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06f4d3449addd24438a0f82938c8f307, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &2136060647 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6853656226301856488, guid: dbbc51cb1ab75ed42859c39e70714c51, type: 3}
