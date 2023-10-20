@@ -21,6 +21,8 @@ public class BallMovement : MonoBehaviour
     private int strokeCount;
     private GameObject cam;
     public Vector3 newtonsAppeilay;
+    public AudioSource source;
+    public AudioClip hole,putt,wall;
 
     // Start is called before the first frame update
     void Awake()
@@ -102,6 +104,7 @@ public class BallMovement : MonoBehaviour
             rB.AddForce(Quaternion.Euler(0, angle, 0) * Vector3.forward * maxPower * temp, ForceMode.Impulse);
             shoot = false;
             //shoot sound
+            source.PlayOneShot(putt);
             strokeCount++;
             strokeUI.GetComponent<StrokeUI>().addAStroke(strokeCount);
         }
@@ -132,12 +135,29 @@ public class BallMovement : MonoBehaviour
     {
         shoot = true;
     }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Wall"))
+        {
+            source.PlayOneShot(wall);
+        }
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Hole"))
         {
+            source.PlayOneShot(hole);
             GameObject.Find("Score").GetComponent<StrokeScoreUpdate>().updateScorecard(strokeCount);
-           // SceneManager.LoadScene("SampleScene");
+            if (scoreCard)
+            {
+                GameObject.Find("ScoreCard").GetComponent<CanvasGroup>().alpha = 1;
+                scoreCard = false;
+            }
+            Invoke("next", 3);
         }
+    }
+    private void next()
+    {
+        GameObject.Find("SceneManager").GetComponent<SceneMan>().nextScene();
     }
 }
