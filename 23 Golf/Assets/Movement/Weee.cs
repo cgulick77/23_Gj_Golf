@@ -15,6 +15,6 @@ public class Weee : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(0.0f, speed, 0.0f);
+        transform.Rotate(0.0f, speed*Time.deltaTime, 0.0f);
     }
 }

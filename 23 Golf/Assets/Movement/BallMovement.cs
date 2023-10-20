@@ -41,6 +41,7 @@ public class BallMovement : MonoBehaviour
     {
         if (rB.velocity.magnitude < nextShotMinSpeed)
         {
+            this.gameObject.transform.GetChild(0).GetChild(1).GetComponentInChildren<ParticleSystem>().Stop();
             rB.velocity = new Vector3(0, 0, 0);
 
             turnOnLine();
@@ -102,6 +103,7 @@ public class BallMovement : MonoBehaviour
         {
             float temp = GameObject.Find("PowerBar").GetComponent<Image>().fillAmount;
             rB.AddForce(Quaternion.Euler(0, angle, 0) * Vector3.forward * maxPower * temp, ForceMode.Impulse);
+            this.gameObject.transform.GetChild(0).GetChild(1).GetComponentInChildren<ParticleSystem>().Play();
             shoot = false;
             //shoot sound
             source.PlayOneShot(putt);
