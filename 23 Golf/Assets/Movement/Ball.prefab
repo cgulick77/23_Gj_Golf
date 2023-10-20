@@ -114,14 +114,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a234750de1f236649a264748c6e65b28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxPower: 10
-  nextShotMinSpeed: 0.0208
+  maxPower: 35
+  nextShotMinSpeed: 0.3
   changeAngleSpeed: 70
   maxAngVel: 1000
   lineLength: 10
   bar: 0
   shoot: 0
   scoreCard: 0
+  newtonsAppeilay: {x: 0, y: -45, z: 0}
 --- !u!120 &2516578142370031234
 LineRenderer:
   m_ObjectHideFlags: 0
