@@ -20,7 +20,7 @@ public class BallMovement : MonoBehaviour
     private GameObject strokeUI;
     private int strokeCount;
     private GameObject cam;
-    public Vector3 newtonsAppeilay;
+    public Vector3 newtonsAppeilay, startPos;
     public AudioSource source;
     public AudioClip hole,putt,wall;
 
@@ -107,6 +107,7 @@ public class BallMovement : MonoBehaviour
             source.PlayOneShot(putt);
             strokeCount++;
             strokeUI.GetComponent<StrokeUI>().addAStroke(strokeCount);
+            GameObject.Find("PowerBar").GetComponent<Image>().fillAmount=0;
         }
     }
     private void AngleUpdate(int direction)
@@ -148,16 +149,18 @@ public class BallMovement : MonoBehaviour
         {
             source.PlayOneShot(hole);
             GameObject.Find("Score").GetComponent<StrokeScoreUpdate>().updateScorecard(strokeCount);
-            if (scoreCard)
-            {
                 GameObject.Find("ScoreCard").GetComponent<CanvasGroup>().alpha = 1;
                 scoreCard = false;
-            }
             Invoke("next", 3);
         }
     }
     private void next()
     {
+        rB.velocity = new Vector3(0, 0, 0);
+        rB.angularVelocity = new Vector3(0, 0, 0);
+        transform.position = startPos;
+        GameObject.Find("ScoreCard").GetComponent<CanvasGroup>().alpha = 0;
+        scoreCard = true;
         GameObject.Find("SceneManager").GetComponent<SceneMan>().nextScene();
     }
 }

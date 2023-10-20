@@ -11,13 +11,12 @@ public class parUpdate : MonoBehaviour
     void Start()
     {
         parDisplay = GetComponent<TextMeshProUGUI>();
-        index = GameObject.Find("Score").GetComponent<StrokeScoreUpdate>().index;
-        parDisplay.text="Par: "+GameObject.Find("ParNum").transform.GetChild(index).GetComponent<TextMeshProUGUI>().text;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        index = GameObject.Find("Score").GetComponent<StrokeScoreUpdate>().index;
+        parDisplay.text = "Par: " + GameObject.Find("ParNum").transform.GetChild(index).GetComponent<TextMeshProUGUI>().text;
     }
 }

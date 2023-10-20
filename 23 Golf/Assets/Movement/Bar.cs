@@ -24,7 +24,7 @@ public class Bar : MonoBehaviour
         {
             if (!neg)
             {
-                bar.fillAmount = bar.fillAmount + rate;
+                bar.fillAmount = bar.fillAmount + rate*Time.deltaTime;
                 if (bar.fillAmount == 1)
                 {
                     neg = true;
@@ -33,7 +33,7 @@ public class Bar : MonoBehaviour
             }
             else
             {
-                bar.fillAmount = bar.fillAmount - rate;
+                bar.fillAmount = bar.fillAmount - rate * Time.deltaTime;
                 if (bar.fillAmount == 0)
                 {
                     neg = false;
