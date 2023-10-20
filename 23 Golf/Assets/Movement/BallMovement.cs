@@ -8,7 +8,7 @@ public class BallMovement : MonoBehaviour
 {
     [Range(1.0f, 1000.0f)]
     public float maxPower;
-    [Range(0.05f, 0.3f)]
+    [Range(0.3f, 1.0f)]
     public float nextShotMinSpeed;
     public float changeAngleSpeed;
     public float maxAngVel;
@@ -16,10 +16,13 @@ public class BallMovement : MonoBehaviour
     private Rigidbody rB;
     private float angle;
     private LineRenderer line;
-    public bool bar, shoot=false;
+    public bool bar, shoot=false,scoreCard;
     private GameObject strokeUI;
     private int strokeCount;
     private GameObject cam;
+    public Vector3 newtonsAppeilay;
+    public AudioSource source;
+    public AudioClip hole,putt,wall;
 
     // Start is called before the first frame update
     void Awake()
@@ -30,6 +33,7 @@ public class BallMovement : MonoBehaviour
         line = GetComponent<LineRenderer>();
         strokeCount = 0;
         cam= GameObject.Find("StupidCamTrack");
+        Physics.gravity = newtonsAppeilay;
     }
 
     // Update is called once per frame
@@ -37,8 +41,10 @@ public class BallMovement : MonoBehaviour
     {
         if (rB.velocity.magnitude < nextShotMinSpeed)
         {
+            rB.velocity = new Vector3(0, 0, 0);
+
             turnOnLine();
-            
+
             if (Input.GetKey(KeyCode.A))
             {
                 AngleUpdate(-1);
@@ -60,14 +66,34 @@ public class BallMovement : MonoBehaviour
                     Shoot();
                 }
             }
-
         }
+
         else
         {
             turnOffLine();
             SendPos();
         }
-        
+        if (Input.GetKey(KeyCode.R))
+        {
+            SceneManager.LoadScene("SampleScene");
+        }
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            if (scoreCard)
+            {
+                GameObject.Find("ScoreCard").GetComponent<CanvasGroup>().alpha = 1;
+                scoreCard = false;
+            }
+            else
+            {
+                GameObject.Find("ScoreCard").GetComponent<CanvasGroup>().alpha = 0;
+                scoreCard = true;
+            }
+        }
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
         UpdateLine();
     }
     private void FixedUpdate()
@@ -78,6 +104,7 @@ public class BallMovement : MonoBehaviour
             rB.AddForce(Quaternion.Euler(0, angle, 0) * Vector3.forward * maxPower * temp, ForceMode.Impulse);
             shoot = false;
             //shoot sound
+            source.PlayOneShot(putt);
             strokeCount++;
             strokeUI.GetComponent<StrokeUI>().addAStroke(strokeCount);
         }
@@ -98,7 +125,7 @@ public class BallMovement : MonoBehaviour
     }
     private void turnOnLine()
     {
-        line.startWidth = 10.0f;
+        line.startWidth = 1.0f;
     }
     private void SendPos()
     {
@@ -108,12 +135,29 @@ public class BallMovement : MonoBehaviour
     {
         shoot = true;
     }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Wall"))
+        {
+            source.PlayOneShot(wall);
+        }
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Hole"))
         {
-
-            SceneManager.LoadScene("SampleScene");
+            source.PlayOneShot(hole);
+            GameObject.Find("Score").GetComponent<StrokeScoreUpdate>().updateScorecard(strokeCount);
+            if (scoreCard)
+            {
+                GameObject.Find("ScoreCard").GetComponent<CanvasGroup>().alpha = 1;
+                scoreCard = false;
+            }
+            Invoke("next", 3);
         }
+    }
+    private void next()
+    {
+        GameObject.Find("SceneManager").GetComponent<SceneMan>().nextScene();
     }
 }

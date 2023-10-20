@@ -12,9 +12,11 @@ GameObject:
   - component: {fileID: 1338929209698923913}
   - component: {fileID: 7416926274498984785}
   - component: {fileID: 1101357115539485836}
+  - component: {fileID: 8989409864985699026}
+  - component: {fileID: 1762539635104546390}
   m_Layer: 0
   m_Name: Wall_1x1_Round_Corner
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26,7 +28,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2675262162793461861}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 208.95226, y: -0.81390035, z: 65.2}
   m_LocalScale: {x: 0.13430138, y: 0.13430138, z: 0.13430138}
   m_ConstrainProportionsScale: 0
@@ -98,3 +100,29 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -3384976727877448750, guid: 6da75a23f026e56488c52f503049233d, type: 3}
+--- !u!65 &8989409864985699026
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2675262162793461861}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 28.592443, y: 409.05914, z: 180.96}
+  m_Center: {x: -0.2638031, y: 204.52957, z: 90.48}
+--- !u!65 &1762539635104546390
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2675262162793461861}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 180.96, y: 407.3598, z: 31.985687}
+  m_Center: {x: 75.91993, y: 203.6799, z: 164.96718}
