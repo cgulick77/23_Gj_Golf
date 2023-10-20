@@ -1,6 +1,10 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+<<<<<<< HEAD
 --- !u!1 &258681983725914812
+=======
+--- !u!1 &1421786844323794673
+>>>>>>> christian
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,11 +12,18 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 258681983725914811}
   - component: {fileID: 258681983725914808}
   - component: {fileID: 258681983725914809}
   - component: {fileID: 258681983725914814}
   - component: {fileID: 258681983725914815}
+=======
+  - component: {fileID: 1797186074545361995}
+  - component: {fileID: 3413509318631300078}
+  - component: {fileID: 629325177625374500}
+  - component: {fileID: 6467369324366244652}
+>>>>>>> christian
   m_Layer: 0
   m_Name: Battery
   m_TagString: Untagged
@@ -20,36 +31,61 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!4 &258681983725914811
+=======
+--- !u!4 &1797186074545361995
+>>>>>>> christian
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 258681983725914812}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -712.42, y: 47, z: 7105.5}
   m_LocalScale: {x: 10, y: 10, z: 10}
+=======
+  m_GameObject: {fileID: 1421786844323794673}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 203.14154, y: 1.1, z: 34.66632}
+  m_LocalScale: {x: 0.06655319, y: 0.06655319, z: 0.06655319}
+>>>>>>> christian
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!33 &258681983725914808
+=======
+--- !u!33 &3413509318631300078
+>>>>>>> christian
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 258681983725914812}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &258681983725914809
+=======
+  m_GameObject: {fileID: 1421786844323794673}
+  m_Mesh: {fileID: 8639183193416612682, guid: 66d88eb76a608ee46a50ac55eb97bf6f, type: 3}
+--- !u!23 &629325177625374500
+>>>>>>> christian
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 258681983725914812}
+=======
+  m_GameObject: {fileID: 1421786844323794673}
+>>>>>>> christian
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -63,7 +99,11 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
+<<<<<<< HEAD
   - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+=======
+  - {fileID: 2100000, guid: a907f87c2ed2fc341adf60d5b4d6544e, type: 2}
+>>>>>>> christian
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -85,12 +125,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+<<<<<<< HEAD
 --- !u!136 &258681983725914814
 CapsuleCollider:
+=======
+--- !u!64 &6467369324366244652
+MeshCollider:
+>>>>>>> christian
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 258681983725914812}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -112,3 +158,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   brightnessIncreaseAmount: 100
+=======
+  m_GameObject: {fileID: 1421786844323794673}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 8639183193416612682, guid: 66d88eb76a608ee46a50ac55eb97bf6f, type: 3}
+>>>>>>> christian
